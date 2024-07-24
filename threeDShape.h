@@ -5,7 +5,7 @@ class ThreeDShape{
 protected:
     float volume;
     int numSides; 
-    float sides[100];
+    float* sides;
     public:
         ThreeDShape();
         ThreeDShape(float, int, float*);
@@ -15,6 +15,6 @@ protected:
         int getNumSides();
         void addSide(float);
         float* getSides();
-        void calculateVolume();
+        void calculateVolume()=0;
 };
 #endif
