@@ -2,6 +2,7 @@
 #define THREEDSHAPE_H
 
 class ThreeDShape{
+protected:
     float volume;
     int numSides; 
     float sides[100];
