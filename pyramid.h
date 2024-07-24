@@ -17,6 +17,6 @@ float getHeight();
 ~Pyramid();
 Pyramid& operator=(const Pyramid& rhs);
 
-void calculateVolume(Pyramid v);
+void calculateVolume();
 };
 #endif
