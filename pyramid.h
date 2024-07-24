@@ -5,18 +5,18 @@
 #include <iostream>
 
 class Pyramid : public ThreeDShape{
-int length , width, height;
+float length , width, height;
 public :
 Pyramid();
 Pyramid(const Pyramid& rhs);
-Pyramid(float v, int n, float* s,int m,int l,int w, int h);
+Pyramid(float v, int n, float* s,int m,float l,float w, float h);
 
-int getLength();
-int getWidth();
-int getHeight();
+float getLength();
+float getWidth();
+float getHeight();
 ~Pyramid();
 Pyramid& operator=(const Pyramid& rhs);
 
-void calculateVolume();
+void calculateVolume(Pyramid v);
 };
 #endif
