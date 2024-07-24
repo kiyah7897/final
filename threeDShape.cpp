@@ -41,6 +41,21 @@ void ThreeDShape::addSide(float s){
 float* ThreeDShape::getSides(){
     return sides;
 }
+ThreeDShape& ThreeDShape::operator=(const ThreeDShape& rhs){
+
+     numSides = rhs.numSides;
+    volume = rhs.volume;
+    maxSides= rhs.maxSides;
+    sides= new sides[maxSides];
+    for(int i = 0; i < numSides; i++){
+        sides[i] = rhs.sides[i];
+    }
+    return *this;
+}
+
+~ThreeDShape::ThreeDShape(){
+    delete[] sides;
+}
 
 void ThreeDShape::calculateVolume(){
     //There is no default way to calculate volume! Leaving blank...
