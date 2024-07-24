@@ -1,7 +1,7 @@
 pyramid: main.o threeDShape.o pyramid.o
 	g++ -o pyramid main.o threeDShape.o pyramiad.o
 
-main.o: threeDShape.h main.cpp
+main.o: threeDShape.h pyramid.h main.cpp
 	g++ -c main.cpp
 
 threeDShape.o: threeDShape.h threeDShape.cpp
