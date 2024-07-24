@@ -17,6 +17,8 @@ protected:
         int getMaxSides();
         void addSide(float);
         float* getSides();
+    ThreeDShape& operator=(const ThreeDShape& rhs);
+~ThreeDShape();
         void calculateVolume()=0;
 };
 #endif
