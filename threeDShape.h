@@ -6,13 +6,15 @@ protected:
     float volume;
     int numSides; 
     float* sides;
+    int maxSides;
     public:
         ThreeDShape();
-        ThreeDShape(float, int, float*);
+        ThreeDShape(float, int, float*,int);
         ThreeDShape(const ThreeDShape&);
 
         float getVolume();
         int getNumSides();
+        int getMaxSides();
         void addSide(float);
         float* getSides();
         void calculateVolume()=0;
